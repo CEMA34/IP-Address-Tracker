@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+img{
+    max-width: 100%;
+}
+
+.main-div{
+background-image: url(./images/pattern-bg.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+text-align: center;
+padding: 1em;
+height: 250px;
+}
+
+.main-div h1{
+    margin: 0;
+    padding: 0.5em 0;
+    color: #f1f1f1;
+    font-weight: 500;
+}
+
+.ip-input{
+    width: 450px;
+    height: 45px;
+    padding: 1em;
+    border-radius: 15px;
+    border-style: none;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+.main-div button{
+    height: 45px;
+    border-radius: 10px;
+    border-style: none;
+    width: 45px;   
+    background-color: hsl(0, 0%, 17%);
+    color: #f1f1f1;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.main-div button:hover{
+    opacity: 0.8;
+}
+
+.first-section{
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 2em;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.first-section p{
+    margin: 0.5em auto;
+    color: hsl(0, 0%, 59%);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.first-section h1{
+    color: hsl(0, 0%, 17%);
+    margin: 0.5em auto;
+}
+
+.vl{
+    border-left: 1px solid hsl(0, 0%, 59%);
+    height: 70px;
+}
+
+#map{
+    height: 500px;
+    width: 100%;
+}
+
+.attribution{
+    text-align: center;
+    color: hsl(227, 12%, 61%);
+    font-weight: 700;
+    background-color:hsl(233, 12%, 13%);
+
+}
+
+.attribution a{
+    text-decoration: none;
+    color: hsl(13, 100%, 96%);
+    font-weight: 300;
+    font-size: 13px;
+}
+
+@media(max-width:675px) {
+
+    .main-div{
+        padding: 0;
+        padding-top: 3em;
+
+    }
+    .main-div h1{
+        font-size: 24px;
+    }
+
+    .ip-input{
+        width: 250px;
+    }
+
+    .first-section{
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+        height: 450px;
+    }
+
+    .first-section p{
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .first-section h1{
+        font-size: 24px;
+        width: 50%;
+    }
+
+    .vl {
+        display: none;
+    }
+
+    #map{
+        height: 450px;
+    }
+
+    .attribution{
+        font-size: 12px;
+    }
+}
