@@ -6,7 +6,10 @@ const thirdDivHeading = document.querySelector(".timezone")
 const fourthDivHeading = document.querySelector(".isp")
 
 
-button.addEventListener("click", () => {
+button.addEventListener("click", fetchData)
+
+
+function fetchData() {
     fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_8oRUoGKgqzASaIUWkqyuzKt403xtM&ipAddress=${input.value}`)
         .then(response => response.json())
         .then(data => {
@@ -14,20 +17,17 @@ button.addEventListener("click", () => {
             renderMap(data)
 
         })
-})
-
-
-
+}
 
 function renderInfo(data) {
-    firstDivHeading.innerHTML = data.ip
+    firstDivHeading.innerText = data.ip
 
-    secondDivHeading.innerHTML =
+    secondDivHeading.innerText =
         data.location.country + "," + " " + data.location.region + " " + data.location.city
 
-    thirdDivHeading.innerHTML = data.location.timezone
+    thirdDivHeading.innerText = data.location.timezone
 
-    fourthDivHeading.innerHTML = data.isp
+    fourthDivHeading.innerText = data.isp
 }
 
 function renderMap(data) {
