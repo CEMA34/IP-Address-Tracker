@@ -10,13 +10,16 @@ button.addEventListener("click", fetchData)
 
 
 function fetchData() {
-    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_8oRUoGKgqzASaIUWkqyuzKt403xtM&ipAddress=${input.value}`)
+    if(input.value) {
+        fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_8oRUoGKgqzASaIUWkqyuzKt403xtM&ipAddress=${input.value}`)
         .then(response => response.json())
         .then(data => {
             renderInfo(data)
             renderMap(data)
 
         })
+    }
+    
 }
 
 function renderInfo(data) {
